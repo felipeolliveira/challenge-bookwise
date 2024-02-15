@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-sans leading-normal;
+  /* Firefox*/
+  scrollbar-width: thin;
+  scrollbar-color: #252D4A #181C2A;
+}
+
+body {
+  @apply bg-gray-800 text-gray-100;
+}
+
+@layer components {
+  .focus-button {
+    @apply outline-none focus-visible:ring focus-visible:ring-gray-100;
+  }
+}
+
+/* Customize scrollbar */
+*::-webkit-scrollbar {
+  @apply w-[.375rem];
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-gray-700;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full border-2 border-gray-700;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
